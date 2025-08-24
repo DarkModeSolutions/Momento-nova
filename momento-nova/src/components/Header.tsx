@@ -30,7 +30,7 @@ const Header = () => {
 
   return (
     <div
-      className={`${isScrolled ? "glass inner-shadow" : ""} p-3 pl-10 sticky top-0 z-50 transition-all duration-300 ease-in-out flex items-center gap-6`}
+      className={`${isScrolled ? "glass inner-shadow" : ""} p-3 pl-10 fixed top-0 z-50 transition-all duration-300 ease-in-out flex items-center gap-6 w-full`}
     >
       <Sheet>
         <SheetTrigger
@@ -38,7 +38,7 @@ const Header = () => {
             console.log("Sheet opened");
           }}
         >
-          <GiHamburgerMenu className="cursor-pointer" />
+          <GiHamburgerMenu className="cursor-pointer text-white" />
         </SheetTrigger>
         <SheetContent className="glass inner-shadow p-6 text-white" side="left">
           <div className="flex items-center gap-20 pl-6">
@@ -63,7 +63,11 @@ const Header = () => {
         </SheetContent>
       </Sheet>
       <div className="">
-        <Image src={logoImg} alt="logo" width={75} height={50} />
+        <Image
+          src={logoImg}
+          alt="logo"
+          style={{ width: "75px", height: "50px" }}
+        />
       </div>
     </div>
   );

@@ -261,3 +261,105 @@ nextjs-portal * {
   border-bottom: 3px solid;
   border-image: linear-gradient(to right, #c88fff, #4b0787) 1;
 }
+
+.hero-section-bg-gradient {
+  background: #00000000;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(42, 0, 84, 1) 50%
+  );
+}
+
+.experiences-stick-gradient {
+  border: none;
+  border-left: 2px solid;
+  border-image: linear-gradient(to bottom, #fd15fd, #9c37fd) 1;
+}
+
+/* .experiences-line-gradient {
+  border: none;
+  border-top: 2px dashed;
+  border-image: linear-gradient(to bottom, #fd15fd, #9c37fd) 1;
+} */
+
+/* .experiences-desc {
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #fd15da, #9c37fd) 1;
+  border-radius: 8px;
+} */
+
+.experiences-desc {
+  position: relative;
+  border-radius: 8px; /* your radius */
+  background: transparent; /* keep interior transparent */
+}
+
+/* Gradient border, transparent center */
+.experiences-desc::before {
+  --b: 1px; /* border thickness */
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: var(--b);
+  border-radius: inherit;
+  background: linear-gradient(to bottom, #fd15da, #9c37fd);
+  pointer-events: none;
+
+  /* Mask out the middle so only the “ring” shows */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+/* Left border positioning variant */
+.experiences-outer-border-left {
+  position: relative;
+}
+
+.experiences-outer-border-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  /* Create the gradient border pattern - LEFT positioning */
+  background: 
+    /* Left border - symmetrical from center outward */
+    linear-gradient(to bottom, #9c37fd, #fd15da, #9c37fd) 0 0 / 4px 100%
+      no-repeat,
+    /* Top border - 20% width from left, fading out with center color */
+      linear-gradient(to right, #fd15da, transparent) 0 0 / 20% 4px no-repeat,
+    /* Bottom border - 20% width from left, fading out with center color */
+      linear-gradient(to right, #fd15da, transparent) 0 100% / 20% 4px no-repeat;
+}
+
+/* Right border positioning variant */
+.experiences-outer-border-right {
+  position: relative;
+}
+
+.experiences-outer-border-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  /* Create the gradient border pattern - RIGHT positioning */
+  background: 
+    /* Right border - symmetrical from center outward */
+    linear-gradient(to bottom, #9c37fd, #fd15da, #9c37fd) 100% 0 / 4px 100%
+      no-repeat,
+    /* Top border - 20% width from right, fading out with center color */
+      linear-gradient(to left, #fd15da, transparent) 100% 0 / 20% 4px no-repeat,
+    /* Bottom border - 20% width from right, fading out with center color */
+      linear-gradient(to left, #fd15da, transparent) 100% 100% / 20% 4px
+      no-repeat;
+}
