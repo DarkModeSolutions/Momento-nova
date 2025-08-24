@@ -86,10 +86,32 @@ const WorkedWithSection = () => {
           consequat sunt nostrud amet.
         </p>
       </div>
+      {/* First row: 3 logos (indices 0, 1, 2) */}
       <div className="mt-5 flex flex-wrap gap-5 justify-center">
-        {workedWithLogos.map((logo, index) => (
-          <WorkedWith key={index} img={logo.src} alt={logo.alt} />
-        ))}
+        {workedWithLogos.slice(0, 3).map((logo, index) => {
+          console.log("First row indices: ", index);
+          return (
+            <WorkedWith key={`first-${index}`} img={logo.src} alt={logo.alt} />
+          );
+        })}
+      </div>
+      {/* Second row: 4 logos (indices 3, 4, 5, 6) */}
+      <div className="mt-5 flex flex-wrap gap-5 justify-center">
+        {workedWithLogos.slice(3, 7).map((logo, index) => {
+          console.log("Second row indices: ", index + 3);
+          return (
+            <WorkedWith key={`second-${index}`} img={logo.src} alt={logo.alt} />
+          );
+        })}
+      </div>
+      {/* Third row: 6 logos (indices 7, 8, 9, 10, 11, 12) */}
+      <div className="mt-5 flex flex-wrap gap-5 justify-center">
+        {workedWithLogos.slice(7, 13).map((logo, index) => {
+          console.log("Third row indices: ", index + 7);
+          return (
+            <WorkedWith key={`third-${index}`} img={logo.src} alt={logo.alt} />
+          );
+        })}
       </div>
     </div>
   );
