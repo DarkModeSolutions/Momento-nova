@@ -1,0 +1,155 @@
+"use client";
+
+import Image from "next/image";
+import astronautImage from "@/../public/assets/images/astronaut-sitting.png";
+import { RiTwitterXLine } from "react-icons/ri";
+import { FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import React from "react";
+
+const Footer = () => {
+  return (
+    <div className="gradient-radial px-3">
+      <div className="flex flex-col justify-center items-center">
+        <h1 className="gradient-text text-4xl font-[400]">Get in Touch</h1>
+        <p className="font-[400] text-sm text-gray-500 ml-2 pt-2">
+          Velit officia consequat duis enim velit mollit. Exercitation veniam
+          consequat sunt nostrud amet.
+        </p>
+      </div>
+      <div className="mt-6 p-4 glass flex justify-between items-center rounded-[10px]">
+        <div className="p-4 text-white w-3/5">
+          <h3>Let&apos;s connect constellations</h3>
+          <p>
+            Let&apos;s align our constellations! Reach out and let the magic of
+            collaboration illuminate our skies.
+          </p>
+          <form className="flex flex-col gap-3 w-full pt-6">
+            <div className="flex justify-between items-center gap-3">
+              <input
+                type="text"
+                placeholder="Last Name"
+                name="lastName"
+                id="lastName"
+                className=" rounded-[8px] glass-input p-2"
+              />
+              <input
+                type="text"
+                placeholder="First Name"
+                name="firstName"
+                id="firstName"
+                className=" rounded-[8px] glass-input p-2"
+              />
+            </div>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              className=" rounded-[8px] glass-input p-2"
+            />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone Number"
+              className="rounded-[8px] glass-input p-2"
+            />
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Message"
+              className=" rounded-[8px] glass-input p-2"
+            ></textarea>
+            <button className="p-4 button-gradient">
+              Send it to the Moon 🚀
+            </button>
+          </form>
+        </div>
+        <div className="w-2/5 h-auto rounded-[12px] relative">
+          <Image
+            src={astronautImage}
+            alt="Astronaut Sitting"
+            className="rounded-[12px]"
+          />
+          <div className="absolute top-0 w-full h-full bg-gray-700 opacity-[40%] rounded-[12px]"></div>
+          <p className=" absolute text-white text-sm bottom-[5%] w-4/5 right-[5%]">
+            <q className="text-gray-400">
+              Two lunar months revealed Earth&apos;s fragile beauty against vast
+              silence, transforming my view of our place in the universe.
+            </q>
+            <br /> - Irinel Traista
+          </p>
+        </div>
+      </div>
+      <div className="mt-3 p-6 flex justify-between items-start">
+        <div className="grid grid-cols-4 gap-4">
+          <div className="text-white font-[500] text-sm">
+            <span className="">Product</span>
+            <ul
+              className="flex flex-col gap-6 mt-5
+            "
+            >
+              <li className="text-[#ffffff80] font-[400]">Features</li>
+              <li className="text-[#ffffff80] font-[400]">Integration</li>
+              <li className="text-[#ffffff80] font-[400]">Updates</li>
+              <li className="text-[#ffffff80] font-[400]">FAQ</li>
+              <li className="text-[#ffffff80] font-[400]">Pricing</li>
+            </ul>
+          </div>
+          <div className="text-white font-[500] text-sm">
+            <span className="">Company</span>
+            <ul
+              className="flex flex-col gap-6 mt-5
+            "
+            >
+              <li className="text-[#ffffff80] font-[400]">About</li>
+              <li className="text-[#ffffff80] font-[400]">Blog</li>
+              <li className="text-[#ffffff80] font-[400]">Careers</li>
+              <li className="text-[#ffffff80] font-[400]">Manifesto</li>
+              <li className="text-[#ffffff80] font-[400]">Press</li>
+              <li className="text-[#ffffff80] font-[400]">Contact</li>
+            </ul>
+          </div>
+          <div className="text-white font-[500] text-sm">
+            <span className="">Resources</span>
+            <ul
+              className="flex flex-col gap-6 mt-5
+            "
+            >
+              <li className="text-[#ffffff80] font-[400]">Examples</li>
+              <li className="text-[#ffffff80] font-[400]">Community</li>
+              <li className="text-[#ffffff80] font-[400]">Guides</li>
+              <li className="text-[#ffffff80] font-[400]">Docs</li>
+              <li className="text-[#ffffff80] font-[400]">Press</li>
+            </ul>
+          </div>
+          <div className="text-white font-[500] text-sm">
+            <span className="">Legal</span>
+            <ul
+              className="flex flex-col gap-6 mt-5
+            "
+            >
+              <li className="text-[#ffffff80] font-[400]">Privacy</li>
+              <li className="text-[#ffffff80] font-[400]">Terms</li>
+              <li className="text-[#ffffff80] font-[400]">Security</li>
+            </ul>
+          </div>
+        </div>
+        <div className="flex space-x-4">
+          <a href="#" className="text-[#ffffff80] text-2xl">
+            <RiTwitterXLine />
+          </a>
+          <a href="#" className="text-[#ffffff80] text-2xl">
+            <FaInstagram />
+          </a>
+          <a href="#" className="text-[#ffffff80] text-2xl">
+            <FaYoutube />
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;

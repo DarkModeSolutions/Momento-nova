@@ -121,18 +121,20 @@
   }
 }
 
+nextjs-portal,
+nextjs-portal * {
+  display: none !important;
+}
+
 .gradient-text {
   background: linear-gradient(
-    90deg,
-    rgba(0, 240, 255, 1) 0%,
-    rgba(82, 0, 255, 1) 50%,
-    rgba(255, 45, 247, 1) 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: bold;
-  font-size: 2rem;
+    to right,
+    #ff2df7,
+    #5200ff,
+    #00f0ff
+  ); /* create bg gradient */
+  color: transparent; /* hide text fill */
+  background-clip: text; /* use text as clipping mask for bg */
 }
 
 .gradient-radial {
@@ -215,16 +217,39 @@
 }
 
 .inner-shadow {
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
-}
-
-.glass {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
   box-shadow:
     0 4px 32px 0 rgba(31, 38, 135, 0.37),
     inset 0 0 15px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.glass {
+  background: transparent;
+  background: rgba(255, 255, 255, 5%);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-input {
+  background: transparent;
+  background: rgba(255, 255, 255, 5%);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 20%);
+}
+
+.button-gradient {
+  background: #763af5 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(118, 58, 245, 1) 0%,
+    rgba(166, 4, 242, 1) 50%
+  ) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(118, 58, 245, 0.4);
 }
