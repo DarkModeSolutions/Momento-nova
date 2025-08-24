@@ -2,9 +2,9 @@
 
 import React from "react";
 import img1 from "@/../public/assets/images/eventImg1.png";
-import img2 from "@/../public/assets/images/eventImg2.png";
-import img3 from "@/../public/assets/images/eventImg3.png";
-import img4 from "@/../public/assets/images/eventImg4.png";
+// import img2 from "@/../public/assets/images/eventImg2.png";
+// import img3 from "@/../public/assets/images/eventImg3.png";
+// import img4 from "@/../public/assets/images/eventImg4.png";
 import EventDetails from "@/components/EventDetails";
 
 const EventWorldSection = () => {
@@ -18,21 +18,21 @@ const EventWorldSection = () => {
     },
     {
       id: 2,
-      img: img2,
+      img: img1,
       alt: "Event Image 2",
       title: "Blockchain Explained: A Revolution in Finance",
       desc: "Delve into the world of blockchain technology and its transformative impact on the financial industry.",
     },
     {
       id: 3,
-      img: img3,
+      img: img1,
       alt: "Event Image 3",
       title: "Breaking the Silence: Mental Health Awareness in the Workplace",
       desc: "An exploration of the importance of mental health awareness and the initiatives reshaping workplaces for employee well-being.",
     },
     {
       id: 4,
-      img: img4,
+      img: img1,
       alt: "Event Image 4",
       title: "Revolutionizing Investment Strategies",
       desc: "An in-depth look at global efforts to conserve biodiversity and safeguard endangered species from extinction.",
