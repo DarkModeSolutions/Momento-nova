@@ -1,9 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
-@theme inline {
+/* Theme variables - converted to standard CSS custom properties */
+:root {
+  /* Tailwind theme mappings */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -41,9 +41,8 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
-}
 
-:root {
+  /* Base theme colors */
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
@@ -114,9 +113,253 @@
 
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    border-color: var(--color-border);
+    outline: 2px solid transparent;
+    outline-offset: 2px;
   }
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--color-background);
+    color: var(--color-foreground);
   }
+}
+
+nextjs-portal,
+nextjs-portal * {
+  display: none !important;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    #ff2df7,
+    #5200ff,
+    #00f0ff
+  ); /* create bg gradient */
+  color: transparent; /* hide text fill */
+  background-clip: text; /* use text as clipping mask for bg */
+}
+
+.gradient-radial {
+  background: #74159d;
+  background: radial-gradient(
+    circle,
+    rgba(116, 21, 157, 1) 0%,
+    rgba(16, 2, 29, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+}
+
+.gradient-border-left,
+.gradient-border-right {
+  position: relative;
+  padding: 1rem;
+  background: #fff; /* or your content background */
+}
+
+/* Left border */
+.gradient-border-left::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 50%; /* only top half */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 240, 255, 1) 0%,
+    rgba(82, 0, 255, 1) 50%,
+    rgba(255, 45, 247, 1) 100%
+  );
+}
+
+/* Right border */
+.gradient-border-right::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4px;
+  height: 50%; /* only top half */
+  background: linear-gradient(
+    90deg,
+    rgba(0, 240, 255, 1) 0%,
+    rgba(82, 0, 255, 1) 50%,
+    rgba(255, 45, 247, 1) 100%
+  );
+}
+
+.gradient-border-component {
+  border: 4px solid transparent;
+  border-image: linear-gradient(
+    90deg,
+    rgba(253, 21, 218, 1) 0%,
+    rgba(156, 55, 253, 1) 50%
+  );
+  border-image-slice: 1;
+  padding: 1rem;
+  background: #fff; /* optional background */
+}
+
+.gradient-background {
+  background: #00000000;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(42, 0, 84, 1) 50%
+  );
+}
+
+.gradient-border-menu-items {
+  border: 4px solid transparent; /* thickness of border */
+  border-radius: 12px; /* optional */
+  background:
+    linear-gradient(transparent, transparent) padding-box,
+    linear-gradient(90deg, rgba(200, 143, 255, 1) 0%, rgba(75, 7, 135, 1) 50%)
+      border-box;
+}
+
+.inner-shadow {
+  box-shadow:
+    0 4px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.glass {
+  background: transparent;
+  background: rgba(255, 255, 255, 5%);
+  backdrop-filter: blur(4px);
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-input {
+  background: transparent;
+  background: rgba(255, 255, 255, 5%);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 20%);
+}
+
+.button-gradient {
+  background: #763af5 !important;
+  background: linear-gradient(
+    90deg,
+    rgba(118, 58, 245, 1) 0%,
+    rgba(166, 4, 242, 1) 50%
+  ) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-gradient:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(118, 58, 245, 0.4);
+}
+
+.bottom-gradient-menu-item-border {
+  border: none;
+  border-bottom: 3px solid;
+  border-image: linear-gradient(to right, #c88fff, #4b0787) 1;
+}
+
+.hero-section-bg-gradient {
+  background: #00000000;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(42, 0, 84, 1) 50%
+  );
+}
+
+.experiences-stick-gradient {
+  border: none;
+  border-left: 2px solid;
+  border-image: linear-gradient(to bottom, #fd15fd, #9c37fd) 1;
+}
+
+/* .experiences-line-gradient {
+  border: none;
+  border-top: 2px dashed;
+  border-image: linear-gradient(to bottom, #fd15fd, #9c37fd) 1;
+} */
+
+/* .experiences-desc {
+  border: 1px solid;
+  border-image: linear-gradient(to bottom, #fd15da, #9c37fd) 1;
+  border-radius: 8px;
+} */
+
+.experiences-desc {
+  position: relative;
+  border-radius: 8px; /* your radius */
+  background: transparent; /* keep interior transparent */
+}
+
+/* Gradient border, transparent center */
+.experiences-desc::before {
+  --b: 1px; /* border thickness */
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: var(--b);
+  border-radius: inherit;
+  background: linear-gradient(to bottom, #fd15da, #9c37fd);
+  pointer-events: none;
+
+  /* Mask out the middle so only the “ring” shows */
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+}
+
+/* Left border positioning variant */
+.experiences-outer-border-left {
+  position: relative;
+}
+
+.experiences-outer-border-left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  /* Create the gradient border pattern - LEFT positioning */
+  background: 
+    /* Left border - symmetrical from center outward */
+    linear-gradient(to bottom, #9c37fd, #fd15da, #9c37fd) 0 0 / 4px 100%
+      no-repeat,
+    /* Top border - 20% width from left, fading out with center color */
+      linear-gradient(to right, #fd15da, transparent) 0 0 / 20% 4px no-repeat,
+    /* Bottom border - 20% width from left, fading out with center color */
+      linear-gradient(to right, #fd15da, transparent) 0 100% / 20% 4px no-repeat;
+}
+
+/* Right border positioning variant */
+.experiences-outer-border-right {
+  position: relative;
+}
+
+.experiences-outer-border-right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+
+  /* Create the gradient border pattern - RIGHT positioning */
+  background: 
+    /* Right border - symmetrical from center outward */
+    linear-gradient(to bottom, #9c37fd, #fd15da, #9c37fd) 100% 0 / 4px 100%
+      no-repeat,
+    /* Top border - 20% width from right, fading out with center color */
+      linear-gradient(to left, #fd15da, transparent) 100% 0 / 20% 4px no-repeat,
+    /* Bottom border - 20% width from right, fading out with center color */
+      linear-gradient(to left, #fd15da, transparent) 100% 100% / 20% 4px
+      no-repeat;
 }
