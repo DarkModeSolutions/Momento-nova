@@ -139,6 +139,17 @@ nextjs-portal * {
   background-clip: text; /* use text as clipping mask for bg */
 }
 
+.gradient-text-love {
+  background: linear-gradient(
+    to right,
+    #e59cffb6,
+    #ba9cff8a,
+    #9cb1ffef
+  ); /* create bg gradient */
+  color: transparent; /* hide text fill */
+  background-clip: text; /* use text as clipping mask for bg */
+}
+
 .gradient-radial {
   background: #74159d;
   background: radial-gradient(

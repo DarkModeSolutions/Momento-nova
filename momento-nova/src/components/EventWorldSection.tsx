@@ -39,8 +39,6 @@ const EventWorldSection = () => {
     },
   ];
 
-  console.log("Example: ", typeof img1);
-
   return (
     <div className="p-5 gradient-radial">
       <div className="mt-5 flex flex-col justify-center items-center">
