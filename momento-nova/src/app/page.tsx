@@ -1,6 +1,7 @@
 import EventWorldSection from "@/components/EventWorldSection";
 import HeroSection from "@/components/HeroSection";
 import WallOfLoveSection from "@/components/WallOfLoveSection";
+import WorkedWithSection from "@/components/WorkedWithSection";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <EventWorldSection />
       <WallOfLoveSection />
+      <WorkedWithSection />
     </div>
   );
 }
