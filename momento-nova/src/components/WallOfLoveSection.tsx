@@ -17,7 +17,7 @@ const WallOfLoveSection = () => {
         "Amazing experience! The team was very professional and everything was smooth.",
     },
     {
-      name: "Neha Patel",
+      name: "Emma Johnson",
       review: "Loved the service. Quick, reliable, and worth every penny.",
     },
     {
@@ -26,7 +26,7 @@ const WallOfLoveSection = () => {
         "Great attention to detail. I would definitely recommend to my friends.",
     },
     {
-      name: "Simran Kaur",
+      name: "Sarah Williams",
       review:
         "Fantastic! Exceeded my expectations and was very well organized.",
     },
@@ -35,7 +35,7 @@ const WallOfLoveSection = () => {
       review: "The whole process was seamless. Super impressed.",
     },
     {
-      name: "Ananya Iyer",
+      name: "Jessica Chen",
       review:
         "Very friendly and helpful staff. The overall quality was top-notch.",
     },
@@ -44,15 +44,15 @@ const WallOfLoveSection = () => {
       review: "A great experience from start to finish. Worth it!",
     },
     {
-      name: "Priya Nair",
+      name: "Michael Rodriguez",
       review: "Loved every bit of it. Would 100% recommend.",
     },
     {
-      name: "Manish Kumar",
+      name: "Priya Nair",
       review: "Smooth, efficient, and customer-friendly. Will come back again.",
     },
     {
-      name: "Ritika Das",
+      name: "David Thompson",
       review:
         "Really well done. Felt very taken care of throughout the experience.",
     },

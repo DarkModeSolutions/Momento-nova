@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import astronautImage from "@/../public/assets/images/astronaut-sitting.png";
-import { RiTwitterXLine } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+import { CiLinkedin } from "react-icons/ci";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const Footer = () => {
   const [currentPath, setCurrentPath] = useState("");
@@ -150,15 +150,12 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex space-x-4">
-          <a href="#" className="text-[#ffffff80] text-2xl">
-            <RiTwitterXLine />
-          </a>
-          <a href="#" className="text-[#ffffff80] text-2xl">
+          <Link href="#" className="text-[#ffffff80] text-2xl">
             <FaInstagram />
-          </a>
-          <a href="#" className="text-[#ffffff80] text-2xl">
-            <FaYoutube />
-          </a>
+          </Link>
+          <Link href="#" className="text-[#ffffff80] text-2xl">
+            <CiLinkedin />
+          </Link>
         </div>
       </div>
     </div>
