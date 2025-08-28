@@ -5,9 +5,23 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="hero-section-bg-gradient pt-20">
-      <div className="text-white bg-[#b050fe]">
-        This is the Video Overlay part.
+    <div className="hero-section-bg-gradient pt-20" id="home">
+      <div className="w-full h-[400px] relative overflow-hidden">
+        <video
+          className="w-full h-full object-cover"
+          autoPlay
+          loop
+          muted
+          playsInline
+        >
+          <source src="/assets/video/momentoNovaVid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        {/* Optional overlay for text or controls */}
+        <div className="absolute inset-0 bg-[#3530303b] bg-opacity-20 flex items-center justify-center">
+          <div className="text-white text-center"></div>
+        </div>
+        {/* You can add overlay text here if needed */}
       </div>
       <div className="mt-7 p-5 flex flex-col justify-center items-center">
         <h1 className="gradient-text text-4xl font-[400]">
@@ -18,7 +32,7 @@ const HeroSection = () => {
           consequat sunt nostrud amet.
         </p>
       </div>
-      <div className="mt-5 flex justify-center items-center p-10">
+      <div className="mt-5 flex justify-center items-center p-10" id="services">
         <div className="relative experiences-stick-gradient h-[700px] mt-28">
           <Experiences
             experienceContainerSide="right"

@@ -40,7 +40,7 @@ const EventWorldSection = () => {
   ];
 
   return (
-    <div className="p-5 gradient-radial">
+    <div className="p-5 gradient-radial" id="blog">
       <div className="mt-5 flex flex-col justify-center items-center">
         <h1 className="gradient-text text-4xl font-[400]">
           Inside the Event World
