@@ -5,11 +5,24 @@ import astronautImage from "@/../public/assets/images/astronaut-sitting.png";
 import { RiTwitterXLine } from "react-icons/ri";
 import { FaInstagram } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const Footer = () => {
+  const [currentPath, setCurrentPath] = useState("");
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setCurrentPath(pathname);
+  }, [pathname]);
+
   return (
-    <div className="gradient-radial px-3">
+    <div
+      className={`${
+        currentPath === "/about-us" ? "hidden" : "gradient-radial px-3"
+      }`}
+    >
       <div className="flex flex-col justify-center items-center">
         <h1 className="gradient-text text-4xl font-[400]">Get in Touch</h1>
         <p className="font-[400] text-sm text-gray-500 ml-2 pt-2">
