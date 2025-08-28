@@ -375,3 +375,10 @@ nextjs-portal * {
       linear-gradient(to left, #fd15da, transparent) 100% 100% / 20% 4px
       no-repeat;
 }
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(to right, #ff2df7, #5200ff, #00f0ff);
+  border-radius: 1px;
+}

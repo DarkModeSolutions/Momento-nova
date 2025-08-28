@@ -13,6 +13,7 @@ import logoImg from "@/../public/assets/images/logo.png";
 import Image from "next/image";
 import MenuComponent from "@/components/MenuComponent";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,9 +30,17 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const [currentPath, setCurrentPath] = useState("");
+
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setCurrentPath(pathname);
+  }, [pathname]);
+
   return (
     <div
-      className={`${isScrolled ? "glass inner-shadow" : ""} p-3 pt-0 pb-0 pl-10 fixed top-0 z-50 transition-all duration-300 ease-in-out flex items-center gap-6 w-full`}
+      className={`${isScrolled ? "glass inner-shadow" : currentPath === "/about-us" ? "border border-solid border-[#FFFFFF26]" : ""} p-3 pt-0 pb-0 pl-10 fixed top-0 z-50 transition-all duration-300 ease-in-out flex items-center gap-6 w-full`}
     >
       <Sheet>
         <SheetTrigger
@@ -52,7 +61,9 @@ const Header = () => {
               />
             </SheetClose>
             <div className="">
-              <Image src={logoImg} alt="logo" width={200} height={200} />
+              <Link href={"/"}>
+                <Image src={logoImg} alt="logo" width={200} height={200} />
+              </Link>
             </div>
           </div>
           <div className="mt-2 flex flex-col justify-center items-center">
