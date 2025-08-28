@@ -81,10 +81,10 @@ const WallOfLoveSection = () => {
           onMouseEnter={() => plugin.current.stop()}
           onMouseLeave={() => plugin.current.play()}
         >
-          <CarouselContent className="flex">
+          <CarouselContent className="flex gap-6">
             {reviews.map((review, index) => (
               <CarouselItem
-                className="md:basis-1/3 lg:basis-1/4 xl:basis-1/5"
+                className="md:basis-1/3 lg:basis-1/4 xl:basis-1/5 pl-6"
                 key={index}
               >
                 <Review name={review.name} review={review.review} />

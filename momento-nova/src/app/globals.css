@@ -116,6 +116,7 @@
     border-color: var(--color-border);
     outline: 2px solid transparent;
     outline-offset: 2px;
+    scroll-behavior: smooth;
   }
   body {
     background-color: var(--color-background);

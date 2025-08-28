@@ -38,7 +38,7 @@ const Experiences = ({
           >
             <div className="experiences-desc p-3 h-[200px] w-[450px]">
               <h4 className="font-semibold text-3xl">{experienceHeading}</h4>
-              <p className="font-medium text-sm mt-2">
+              <p className="font-medium text-sm mt-3 text-gray-500">
                 {experienceDescription}
               </p>
             </div>

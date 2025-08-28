@@ -76,7 +76,7 @@ const WorkedWithSection = () => {
   ];
 
   return (
-    <div className="p-5 gradient-radial">
+    <div className="p-5 gradient-radial" id="portfolio">
       <div className="mt-5 flex flex-col justify-center items-center">
         <h1 className="gradient-text text-4xl font-[400]">
           We have worked with
@@ -87,7 +87,7 @@ const WorkedWithSection = () => {
         </p>
       </div>
       {/* First row: 3 logos (indices 0, 1, 2) */}
-      <div className="mt-5 flex flex-wrap gap-5 justify-center">
+      <div className="mt-5 flex flex-wrap gap-8 justify-center">
         {workedWithLogos.slice(0, 3).map((logo, index) => {
           return (
             <WorkedWith key={`first-${index}`} img={logo.src} alt={logo.alt} />
@@ -95,7 +95,7 @@ const WorkedWithSection = () => {
         })}
       </div>
       {/* Second row: 4 logos (indices 3, 4, 5, 6) */}
-      <div className="mt-5 flex flex-wrap gap-5 justify-center">
+      <div className="mt-5 flex flex-wrap gap-8 justify-center">
         {workedWithLogos.slice(3, 7).map((logo, index) => {
           return (
             <WorkedWith key={`second-${index}`} img={logo.src} alt={logo.alt} />
@@ -103,7 +103,7 @@ const WorkedWithSection = () => {
         })}
       </div>
       {/* Third row: 6 logos (indices 7, 8, 9, 10, 11, 12) */}
-      <div className="mt-5 flex flex-wrap gap-5 justify-center">
+      <div className="mt-5 flex flex-wrap gap-8 justify-center">
         {workedWithLogos.slice(7, 13).map((logo, index) => {
           return (
             <WorkedWith key={`third-${index}`} img={logo.src} alt={logo.alt} />
