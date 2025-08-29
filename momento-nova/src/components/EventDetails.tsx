@@ -23,7 +23,7 @@ const EventDetails = ({
       </div>
       <div className="text-white mt-4">
         <h2 className="text-sm font-semibold">{title}</h2>
-        <p className="text-gray-600 font-normal text-xs">{desc}</p>
+        <p className="text-[#989a9e] font-normal text-xs">{desc}</p>
       </div>
     </div>
   );
