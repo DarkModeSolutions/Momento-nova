@@ -6,7 +6,8 @@ import pullmanImg from "@/../public/assets/images/pullman.png";
 import rafflesimg from "@/../public/assets/images/raffleshotel.png";
 import addressImg from "@/../public/assets/images/address.png";
 import accorimg from "@/../public/assets/images/accor.png";
-import movenpickImg from "@/../public/assets/images/movenpick.png";
+// import newMovenpickImg from "@/../public/assets/images/newMovenpickImg.png";
+import newMovenpickImg from "@/../public/assets/images/movenpickNewImagePriy-removebg-preview.png";
 import whotelsImg from "@/../public/assets/images/whotels.png";
 import atpalmdubaiImg from "@/../public/assets/images/atpalmdubai.png";
 import jumeirahImg from "@/../public/assets/images/jumeirah.png";
@@ -20,58 +21,86 @@ const WorkedWithSection = () => {
     {
       src: accorimg,
       alt: "Accor",
+      height: "h-[%]",
+      width: "w-32",
     },
     {
-      src: movenpickImg,
+      src: newMovenpickImg,
       alt: "Movenpick",
+      height: "h-[%]",
+      width: "w-24",
     },
     {
       src: whotelsImg,
       alt: "W Hotels",
+      height: "h-[%]",
+      width: "w-24",
     },
     {
       src: atpalmdubaiImg,
       alt: "At Palm Dubai",
+      height: "h-[%]",
+      width: "w-24",
     },
     {
       src: jumeirahImg,
       alt: "Jumeirah",
+      height: "h-[%]",
+      width: "w-24",
     },
     {
       src: keminskiImg,
       alt: "Kempinski",
+      height: "h-[%]",
+      width: "w-24",
     },
     {
       src: intercontinentalImg,
       alt: "Intercontinental",
+      height: "h-[%]",
+      width: "w-32",
     },
     {
       src: hiltonImg,
       alt: "Hilton",
+      height: "h-[%]",
+      width: "w-24",
     },
     {
       src: marriottImg,
       alt: "Marriott",
+      height: "h-[%]",
+      width: "w-24",
     },
     {
       src: novotelImg,
       alt: "Novotel",
+      height: "h-[%]",
+      width: "w-24",
     },
     {
       src: oneandonlyImg,
       alt: "One&Only",
+      height: "h-[%]",
+      width: "w-24",
     },
     {
       src: pullmanImg,
       alt: "Pullman",
+      height: "h-[%]",
+      width: "w-24",
     },
     {
       src: rafflesimg,
       alt: "Raffles",
+      height: "h-[%]",
+      width: "w-24",
     },
     {
       src: addressImg,
       alt: "Address",
+      height: "h-[%]",
+      width: "w-24",
     },
   ];
 
@@ -87,26 +116,44 @@ const WorkedWithSection = () => {
         </p>
       </div>
       {/* First row: 3 logos (indices 0, 1, 2) */}
-      <div className="mt-5 flex flex-wrap gap-8 justify-center">
+      <div className="mt-5 flex flex-wrap gap-8 justify-center items-center">
         {workedWithLogos.slice(0, 3).map((logo, index) => {
           return (
-            <WorkedWith key={`first-${index}`} img={logo.src} alt={logo.alt} />
+            <WorkedWith
+              key={`first-${index}`}
+              img={logo.src}
+              alt={logo.alt}
+              height={logo.height}
+              width={logo.width}
+            />
           );
         })}
       </div>
       {/* Second row: 4 logos (indices 3, 4, 5, 6) */}
-      <div className="mt-5 flex flex-wrap gap-8 justify-center">
+      <div className="mt-5 flex flex-wrap gap-8 justify-center items-center">
         {workedWithLogos.slice(3, 7).map((logo, index) => {
           return (
-            <WorkedWith key={`second-${index}`} img={logo.src} alt={logo.alt} />
+            <WorkedWith
+              key={`second-${index}`}
+              img={logo.src}
+              alt={logo.alt}
+              height={logo.height}
+              width={logo.width}
+            />
           );
         })}
       </div>
       {/* Third row: 6 logos (indices 7, 8, 9, 10, 11, 12) */}
-      <div className="mt-5 flex flex-wrap gap-8 justify-center">
+      <div className="mt-5 flex flex-wrap gap-8 justify-center items-center">
         {workedWithLogos.slice(7, 13).map((logo, index) => {
           return (
-            <WorkedWith key={`third-${index}`} img={logo.src} alt={logo.alt} />
+            <WorkedWith
+              key={`third-${index}`}
+              img={logo.src}
+              alt={logo.alt}
+              height={logo.height}
+              width={logo.width}
+            />
           );
         })}
       </div>

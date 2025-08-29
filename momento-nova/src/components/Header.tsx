@@ -75,7 +75,7 @@ const Header = () => {
         </SheetContent>
       </Sheet>
       <div className="">
-        <Link href="#home">
+        <Link href={`${currentPath === "/" ? "#" : "/"}`}>
           <Image
             src={logoImg}
             alt="logo"
