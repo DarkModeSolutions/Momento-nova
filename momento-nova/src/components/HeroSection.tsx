@@ -5,8 +5,8 @@ import React from "react";
 
 const HeroSection = () => {
   return (
-    <div className="hero-section-bg-gradient pt-20" id="home">
-      <div className="w-full h-[400px] relative overflow-hidden">
+    <div className="hero-section-bg-gradient pt-0" id="home">
+      <div className="w-full h-screen relative overflow-hidden">
         <video
           className="w-full h-full object-cover"
           autoPlay
@@ -93,7 +93,7 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="w-full h-[630px] mt-10">
+      <div className="w-full md:h-[630px] h-auto mt-10">
         <Image
           src={corporateImg}
           alt="Corporate Image"
@@ -102,7 +102,7 @@ const HeroSection = () => {
         <Image
           src={corporateImg}
           alt="Corporate Image"
-          className="w-full h-full object-fill block md:hidden"
+          className="w-full object-cover block md:hidden"
         />
       </div>
     </div>
