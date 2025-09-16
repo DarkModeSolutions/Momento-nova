@@ -20,7 +20,9 @@ const Footer = () => {
   return (
     <div
       className={`${
-        currentPath === "/about-us" ? "hidden" : "gradient-radial px-3"
+        currentPath === "/about-us"
+          ? "hidden"
+          : "gradient-radial px-3 md:pt-0 pt-7"
       }`}
     >
       <div className="flex flex-col justify-center items-center">
@@ -30,7 +32,7 @@ const Footer = () => {
           consequat sunt nostrud amet.
         </p>
       </div>
-      <div className="mt-6 p-4 glass flex justify-between items-center rounded-[10px]">
+      <div className="mt-6 p-4 glass md:flex hidden justify-between items-center rounded-[10px]">
         <div className="p-4 text-white w-3/5">
           <h3>Let&apos;s connect constellations</h3>
           <p>
@@ -80,6 +82,85 @@ const Footer = () => {
           </form>
         </div>
         <div className="w-2/5 h-auto rounded-[12px] relative">
+          <Image
+            src={astronautImage}
+            alt="Astronaut Sitting"
+            className="rounded-[12px]"
+          />
+          <div className="absolute top-0 w-full h-full bg-gray-700 opacity-[40%] rounded-[12px]"></div>
+          <p className=" absolute text-white text-sm bottom-[5%] w-4/5 right-[5%]">
+            <q className="text-gray-400">
+              Two lunar months revealed Earth&apos;s fragile beauty against vast
+              silence, transforming my view of our place in the universe.
+            </q>
+            <br /> - Irinel Traista
+          </p>
+        </div>
+      </div>
+      <div className="mt-6 p-4 glass md:hidden rounded-[10px]">
+        <div className="p-4 text-white w-full">
+          <h3>Let&apos;s connect constellations</h3>
+          <p className="mt-3">
+            Let&apos;s align our constellations! Reach out and let the magic of
+            collaboration illuminate our skies.
+          </p>
+          <form className="flex flex-col gap-3 w-full pt-6">
+            {/* <div className="">
+              <input
+                type="text"
+                placeholder="Last Name"
+                name="lastName"
+                id="lastName"
+                className=" rounded-[8px] glass-input p-2"
+              />
+              <input
+                type="text"
+                placeholder="First Name"
+                name="firstName"
+                id="firstName"
+                className=" rounded-[8px] glass-input p-2"
+              />
+            </div> */}
+            <input
+              type="text"
+              placeholder="Last Name"
+              name="lastName"
+              id="lastName"
+              className=" rounded-[8px] glass-input p-2"
+            />
+            <input
+              type="text"
+              placeholder="First Name"
+              name="firstName"
+              id="firstName"
+              className=" rounded-[8px] glass-input p-2"
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Email"
+              className=" rounded-[8px] glass-input p-2"
+            />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Phone Number"
+              className="rounded-[8px] glass-input p-2"
+            />
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Message"
+              className=" rounded-[8px] glass-input p-2"
+            ></textarea>
+            <button className="p-4 button-gradient">
+              Send it to the Moon 🚀
+            </button>
+          </form>
+        </div>
+        <div className="w-full mt-3 h-auto rounded-[12px] relative">
           <Image
             src={astronautImage}
             alt="Astronaut Sitting"
