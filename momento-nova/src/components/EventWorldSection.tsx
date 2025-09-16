@@ -51,17 +51,34 @@ const EventWorldSection = () => {
         </p>
       </div>
       <div className="mt-4 p-5 flex justify-center items-center">
-        <div className="grid grid-cols-2">
-          {events.map((event) => (
-            <EventDetails
-              key={event.id}
-              id={event.id}
-              img={event.img.src}
-              title={event.title}
-              desc={event.desc}
-              alt={event.alt}
-            />
-          ))}
+        <div className="hidden md:block">
+          <div className="grid grid-cols-2">
+            {events.map((event) => (
+              <EventDetails
+                key={event.id}
+                id={event.id}
+                img={event.img.src}
+                title={event.title}
+                desc={event.desc}
+                alt={event.alt}
+              />
+            ))}
+          </div>
+        </div>
+        <div className="md:hidden">
+          <div className="grid grid-cols-1">
+            {events.map((event) => (
+              <EventDetails
+                key={event.id}
+                id={event.id}
+                img={event.img.src}
+                title={event.title}
+                desc={event.desc}
+                alt={event.alt}
+                screenType="mobile"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>

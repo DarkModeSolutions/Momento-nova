@@ -6,13 +6,15 @@ const Experiences = ({
   containerTopPosition,
   experienceHeading,
   experienceDescription,
+  screenType = "desktop",
 }: {
-  experienceContainerSide: string;
-  containerTopPosition: string;
+  experienceContainerSide?: string;
+  containerTopPosition?: string;
   experienceHeading: string;
   experienceDescription: string;
+  screenType?: "mobile" | "desktop";
 }) => {
-  return (
+  return screenType === "desktop" ? (
     <div className={`absolute w-[200px] h-[100px] ${containerTopPosition}`}>
       <div className="relative h-full w-full">
         {/* dot */}
@@ -61,6 +63,15 @@ const Experiences = ({
           </div>
         </div> */}
       </div>
+    </div>
+  ) : (
+    <div className="experiences-desc p-3">
+      <h4 className="font-semibold text-3xl text-[#ffffff9d]">
+        {experienceHeading}
+      </h4>
+      <p className="font-medium text-sm mt-3 text-gray-500">
+        {experienceDescription}
+      </p>
     </div>
   );
 };
