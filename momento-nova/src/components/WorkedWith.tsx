@@ -13,7 +13,7 @@ const WorkedWith = ({
   width: string;
 }) => {
   return (
-    <div className="border-[#ffffff46] border-solid border p-4 rounded-3xl flex justify-center items-center">
+    <div className="border-none md:border-[#ffffff46] md:border-solid border p-4 rounded-3xl flex justify-center items-center">
       <Image src={img} alt={alt} className={`${width} ${height}`} />
     </div>
   );
