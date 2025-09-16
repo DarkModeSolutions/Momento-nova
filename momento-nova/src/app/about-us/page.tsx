@@ -7,7 +7,7 @@ import Image from "next/image";
 const AboutUs = () => {
   return (
     <div className="bg-[#1B012D] pt-28 relative min-h-screen p-8">
-      <div className="w-5/12">
+      <div className="md:w-5/12 w-full">
         <div className="w-full text-4xl">
           <h2 className="gradient-text inline">A little bit</h2>
           <h1 className="capitalize text-[#ffffff]">About Us</h1>
@@ -45,7 +45,7 @@ const AboutUs = () => {
           </div>
         </div>
       </div>
-      <div className="absolute w-[600px] aspect-square right-[20%] top-[26%]">
+      <div className="absolute w-[600px] aspect-square right-[20%] top-[26%] hidden md:block">
         <div className="relative">
           <Image
             src={curvyLine}
