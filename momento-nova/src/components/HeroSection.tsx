@@ -24,12 +24,12 @@ const HeroSection = () => {
         {/* You can add overlay text here if needed */}
       </div>
       <div className="mt-7 p-5 flex flex-col justify-center items-center">
-        <h1 className="gradient-text text-4xl font-[400]">
-          Discover our Experiences
+        <h1 className="gradient-text text-4xl font-[400] md:pb-0 pb-2">
+          Crafting Moments
         </h1>
         <p className="font-[400] text-sm text-gray-500 ml-2 pt-2">
-          Velit officia consequat duis enim velit mollit. Exercitation veniam
-          consequat sunt nostrud amet.
+          Moments designed with purpose- crafted, produced, and flawlessly
+          delivered
         </p>
       </div>
       <div className="mt-5 flex justify-center items-center p-10" id="services">

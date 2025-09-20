@@ -68,11 +68,9 @@ const WallOfLoveSection = () => {
         <div className="p-3 rounded-4xl glass mb-3">
           <span className="gradient-text-love">Wall Of Love</span>
         </div>
-        <h1 className="gradient-text text-4xl font-[400]">Loved by Thinkers</h1>
-        <p className="font-[400] text-sm text-gray-500 ml-2 pt-2">
-          Velit officia consequat duis enim velit mollit. Exercitation veniam
-          consequat sunt nostrud amet.
-        </p>
+        <h1 className="gradient-text text-4xl font-[400] md:pb-0 pb-2">
+          Loved by Thinkers
+        </h1>
       </div>
       <div className="w-full mt-16 px-5">
         <Carousel
