@@ -294,7 +294,10 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex space-x-4">
-          <Link href="#" className="text-[#ffffff80] text-2xl">
+          <Link
+            href="https://www.instagram.com/momentonova?igsh=MTRnMTVobWVwcGZyYQ=="
+            className="text-[#ffffff80] text-2xl"
+          >
             <FaInstagram />
           </Link>
           <Link href="#" className="text-[#ffffff80] text-2xl">
