@@ -43,17 +43,17 @@ const Footer = () => {
             <div className="flex justify-between items-center gap-3">
               <input
                 type="text"
-                placeholder="Last Name"
-                name="lastName"
-                id="lastName"
-                className=" rounded-[8px] glass-input p-2"
-              />
-              <input
-                type="text"
                 placeholder="First Name"
                 name="firstName"
                 id="firstName"
-                className=" rounded-[8px] glass-input p-2"
+                className=" rounded-[8px] glass-input p-2 w-full"
+              />
+              <input
+                type="text"
+                placeholder="Last Name"
+                name="lastName"
+                id="lastName"
+                className=" rounded-[8px] glass-input p-2 w-full"
               />
             </div>
             <input
@@ -123,16 +123,16 @@ const Footer = () => {
             </div> */}
             <input
               type="text"
-              placeholder="Last Name"
-              name="lastName"
-              id="lastName"
+              placeholder="First Name"
+              name="firstName"
+              id="firstName"
               className=" rounded-[8px] glass-input p-2"
             />
             <input
               type="text"
-              placeholder="First Name"
-              name="firstName"
-              id="firstName"
+              placeholder="Last Name"
+              name="lastName"
+              id="lastName"
               className=" rounded-[8px] glass-input p-2"
             />
             <input
@@ -176,7 +176,70 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      <div className="mt-3 p-6 flex justify-between items-start">
+      <div className="mt-3 p-6 md:hidden">
+        <div className="grid grid-cols-4 gap-4">
+          <div className="text-white font-[500] text-sm">
+            <span className="">Product</span>
+            <ul
+              className="flex flex-col gap-6 mt-5
+            "
+            >
+              <li className="text-[#ffffff80] font-[400]">Features</li>
+              <li className="text-[#ffffff80] font-[400]">Integration</li>
+              <li className="text-[#ffffff80] font-[400]">Updates</li>
+              <li className="text-[#ffffff80] font-[400]">FAQ</li>
+              <li className="text-[#ffffff80] font-[400]">Pricing</li>
+            </ul>
+          </div>
+          <div className="text-white font-[500] text-sm">
+            <span className="">Company</span>
+            <ul
+              className="flex flex-col gap-6 mt-5
+            "
+            >
+              <li className="text-[#ffffff80] font-[400]">About</li>
+              <li className="text-[#ffffff80] font-[400]">Blog</li>
+              <li className="text-[#ffffff80] font-[400]">Careers</li>
+              <li className="text-[#ffffff80] font-[400]">Manifesto</li>
+              <li className="text-[#ffffff80] font-[400]">Press</li>
+              <li className="text-[#ffffff80] font-[400]">Contact</li>
+            </ul>
+          </div>
+          <div className="text-white font-[500] text-sm">
+            <span className="">Resources</span>
+            <ul
+              className="flex flex-col gap-6 mt-5
+            "
+            >
+              <li className="text-[#ffffff80] font-[400]">Examples</li>
+              <li className="text-[#ffffff80] font-[400]">Community</li>
+              <li className="text-[#ffffff80] font-[400]">Guides</li>
+              <li className="text-[#ffffff80] font-[400]">Docs</li>
+              <li className="text-[#ffffff80] font-[400]">Press</li>
+            </ul>
+          </div>
+          <div className="text-white font-[500] text-sm">
+            <span className="">Legal</span>
+            <ul
+              className="flex flex-col gap-6 mt-5
+            "
+            >
+              <li className="text-[#ffffff80] font-[400]">Privacy</li>
+              <li className="text-[#ffffff80] font-[400]">Terms</li>
+              <li className="text-[#ffffff80] font-[400]">Security</li>
+            </ul>
+          </div>
+        </div>
+        <div className="flex space-x-4 justify-center items-center mt-10">
+          <Link href="#" className="text-[#ffffff80] text-2xl">
+            <FaInstagram />
+          </Link>
+          <Link href="#" className="text-[#ffffff80] text-2xl">
+            <CiLinkedin />
+          </Link>
+        </div>
+      </div>
+      <div className="mt-3 p-6 hidden md:flex justify-between items-start">
         <div className="grid grid-cols-4 gap-4">
           <div className="text-white font-[500] text-sm">
             <span className="">Product</span>

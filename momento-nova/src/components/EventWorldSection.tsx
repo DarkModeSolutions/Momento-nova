@@ -45,10 +45,6 @@ const EventWorldSection = () => {
         <h1 className="gradient-text text-4xl font-[400]">
           Inside the Event World
         </h1>
-        <p className="font-[400] text-sm text-gray-500 ml-2 pt-2">
-          Velit officia consequat duis enim velit mollit. Exercitation veniam
-          consequat sunt nostrud amet.
-        </p>
       </div>
       <div className="mt-4 p-5 flex justify-center items-center">
         <div className="hidden md:block">
