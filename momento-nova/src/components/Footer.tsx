@@ -22,7 +22,7 @@ const Footer = () => {
       className={`${
         currentPath === "/about-us"
           ? "hidden"
-          : "gradient-radial px-3 md:pt-0 pt-7"
+          : "hero-section-bg-gradient px-3 md:pt-0 pt-7"
       }`}
     >
       <div className="flex flex-col justify-center items-center">
