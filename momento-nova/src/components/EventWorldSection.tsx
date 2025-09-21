@@ -13,29 +13,29 @@ const EventWorldSection = () => {
       id: 1,
       img: img1,
       alt: "Event Image 1",
-      title: "Mars Exploration: Unveiling Alien Landscapes",
-      desc: "Embark on a journey through the Red Planet's breathtaking landscapes and uncover the mysteries of Mars.",
+      title: "Corporate gatherings by Momento Nova: ",
+      desc: "Agenda design, stage/scenic, AV & hybrid streaming, registration, speaker management, and hospitality",
     },
     {
       id: 2,
       img: img2,
       alt: "Event Image 2",
-      title: "Blockchain Explained: A Revolution in Finance",
-      desc: "Delve into the world of blockchain technology and its transformative impact on the financial industry.",
+      title: "Bespoke wedding planning & design: ",
+      desc: "Concepts, décor, stage, AV, timelines, and on-site management for effortless, unforgettable “I do’s.”",
     },
     {
       id: 3,
       img: img3,
       alt: "Event Image 3",
-      title: "Breaking the Silence: Mental Health Awareness in the Workplace",
-      desc: "An exploration of the importance of mental health awareness and the initiatives reshaping workplaces for employee well-being.",
+      title: "Corporate Gala",
+      desc: "Awards nights, brand milestones, annual dinners—full-service planning and production that elevates sponsors, speakers, and guest experience.",
     },
     {
       id: 4,
       img: img4,
       alt: "Event Image 4",
-      title: "Revolutionizing Investment Strategies",
-      desc: "An in-depth look at global efforts to conserve biodiversity and safeguard endangered species from extinction.",
+      title: "From Idea to Impact",
+      desc: "Objectives into experiences - content, staging, AV, and show control handled end-to-end",
     },
   ];
 
@@ -45,6 +45,10 @@ const EventWorldSection = () => {
         <h1 className="gradient-text text-4xl font-[400]">
           Inside the Event World
         </h1>
+        <p className="font-[400] text-sm text-gray-500 ml-2 pt-4 md:pt-2 text-center">
+          Step inside our world- real events, real moments, crafted by Momento
+          Nova
+        </p>
       </div>
       <div className="mt-4 p-5 flex justify-center items-center">
         <div className="hidden md:block">

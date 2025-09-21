@@ -27,7 +27,7 @@ const HeroSection = () => {
         <h1 className="gradient-text text-4xl font-[400] md:pb-0 pb-2">
           Crafting Moments
         </h1>
-        <p className="font-[400] text-sm text-gray-500 ml-2 pt-2">
+        <p className="font-[400] text-sm text-gray-500 ml-2 pt-2 text-center">
           Moments designed with purpose- crafted, produced, and flawlessly
           delivered
         </p>

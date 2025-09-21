@@ -36,8 +36,7 @@ const Footer = () => {
         <div className="p-4 text-white w-3/5">
           <h3>Let&apos;s connect constellations</h3>
           <p>
-            Let&apos;s align our constellations! Reach out and let the magic of
-            collaboration illuminate our skies.
+            Reach out and let the magic of collaboration illuminate our skies.
           </p>
           <form className="flex flex-col gap-3 w-full pt-6">
             <div className="flex justify-between items-center gap-3">
@@ -90,10 +89,9 @@ const Footer = () => {
           <div className="absolute top-0 w-full h-full bg-gray-700 opacity-[40%] rounded-[12px]"></div>
           <p className=" absolute text-white text-sm bottom-[5%] w-4/5 right-[5%]">
             <q className="text-gray-400">
-              Two lunar months revealed Earth&apos;s fragile beauty against vast
-              silence, transforming my view of our place in the universe.
+              If it doesn’t move people now, it won’t make history later.
             </q>
-            <br /> - Irinel Traista
+            <br /> - Karim Shokry
           </p>
         </div>
       </div>
@@ -101,8 +99,7 @@ const Footer = () => {
         <div className="p-4 text-white w-full">
           <h3>Let&apos;s connect constellations</h3>
           <p className="mt-3">
-            Let&apos;s align our constellations! Reach out and let the magic of
-            collaboration illuminate our skies.
+            Reach out and let the magic of collaboration illuminate our skies.
           </p>
           <form className="flex flex-col gap-3 w-full pt-6">
             {/* <div className="">
@@ -169,10 +166,9 @@ const Footer = () => {
           <div className="absolute top-0 w-full h-full bg-gray-700 opacity-[40%] rounded-[12px]"></div>
           <p className=" absolute text-white text-sm bottom-[5%] w-4/5 right-[5%]">
             <q className="text-gray-400">
-              Two lunar months revealed Earth&apos;s fragile beauty against vast
-              silence, transforming my view of our place in the universe.
+              If it doesn’t move people now, it won’t make history later.
             </q>
-            <br /> - Irinel Traista
+            <br /> - Karim Shokry
           </p>
         </div>
       </div>
