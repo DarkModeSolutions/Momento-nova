@@ -148,7 +148,7 @@ const WorkedWithSection = () => {
   ];
 
   return (
-    <div className="p-5 gradient-radial" id="portfolio">
+    <div className="p-5 hero-section-bg-gradient" id="portfolio">
       <div className="mt-5 flex flex-col justify-center items-center">
         <h1 className="gradient-text text-4xl font-[400] md:pb-0 pb-2">
           Defining Legacies

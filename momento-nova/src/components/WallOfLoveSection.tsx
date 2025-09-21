@@ -63,7 +63,7 @@ const WallOfLoveSection = () => {
   );
 
   return (
-    <div className="gradient-radial pt-6">
+    <div className="hero-section-bg-gradient pt-6">
       <div className="mt-5 flex flex-col justify-center items-center">
         <div className="p-3 rounded-4xl glass mb-3">
           <span className="gradient-text-love">Wall Of Love</span>
