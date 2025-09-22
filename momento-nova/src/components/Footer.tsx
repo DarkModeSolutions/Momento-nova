@@ -22,14 +22,13 @@ const Footer = () => {
       className={`${
         currentPath === "/about-us"
           ? "hidden"
-          : "hero-section-bg-gradient px-3 md:pt-0 pt-7"
+          : "hero-section-bg-gradient px-3 md:pt-10 pt-7"
       }`}
     >
       <div className="flex flex-col justify-center items-center">
         <h1 className="gradient-text text-4xl font-[400]">Get in Touch</h1>
         <p className="font-[400] text-sm text-gray-500 ml-2 pt-2">
-          Velit officia consequat duis enim velit mollit. Exercitation veniam
-          consequat sunt nostrud amet.
+          We craft the moments you feel now and the legacies you’ll share later
         </p>
       </div>
       <div className="mt-6 p-4 glass md:flex hidden justify-between items-center rounded-[10px]">
@@ -102,22 +101,6 @@ const Footer = () => {
             Reach out and let the magic of collaboration illuminate our skies.
           </p>
           <form className="flex flex-col gap-3 w-full pt-6">
-            {/* <div className="">
-              <input
-                type="text"
-                placeholder="Last Name"
-                name="lastName"
-                id="lastName"
-                className=" rounded-[8px] glass-input p-2"
-              />
-              <input
-                type="text"
-                placeholder="First Name"
-                name="firstName"
-                id="firstName"
-                className=" rounded-[8px] glass-input p-2"
-              />
-            </div> */}
             <input
               type="text"
               placeholder="First Name"
@@ -236,7 +219,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-3 p-6 hidden md:flex justify-between items-start">
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 gap-20">
           <div className="text-white font-[500] text-sm">
             <span className="">Product</span>
             <ul

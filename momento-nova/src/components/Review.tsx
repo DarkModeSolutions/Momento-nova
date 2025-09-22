@@ -6,7 +6,7 @@ const Review = ({ name, review }: { name: string; review: string }) => {
       <h3 className="font-semibold md:text-[#ffffff83] text-[#ffffffd7]">
         {name}
       </h3>
-      <p className="md:text-[#000000] text-[#979696] md:mt-0 mt-2">{review}</p>
+      <p className="md:text-gray-500 text-[#979696] md:mt-0 mt-2">{review}</p>
     </div>
   );
 };

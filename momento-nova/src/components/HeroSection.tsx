@@ -1,7 +1,8 @@
 import Experiences from "@/components/Experiences";
-import Image from "next/image";
-import corporateImg from "@/../public/assets/images/corporate.png";
+// import Image from "next/image";
+// import corporateImg from "@/../public/assets/images/corporate.png";
 import React from "react";
+import ExperienceImageSection from "@/components/ExperienceImageSection";
 
 const HeroSection = () => {
   return (
@@ -93,8 +94,11 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="w-full md:h-[630px] h-auto mt-10">
-        <Image
+      <div className="w-3/4 mx-auto my-10">
+        <hr />
+      </div>
+      <div className="w-full md:h-[630px] h-[200px] mt-10">
+        {/* <Image
           src={corporateImg}
           alt="Corporate Image"
           className="w-full h-full object-cover hidden md:block"
@@ -103,7 +107,8 @@ const HeroSection = () => {
           src={corporateImg}
           alt="Corporate Image"
           className="w-full object-cover block md:hidden"
-        />
+        /> */}
+        <ExperienceImageSection />
       </div>
     </div>
   );
