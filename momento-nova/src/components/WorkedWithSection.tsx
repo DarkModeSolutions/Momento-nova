@@ -150,10 +150,10 @@ const WorkedWithSection = () => {
   return (
     <div className="p-5 hero-section-bg-gradient" id="portfolio">
       <div className="mt-5 flex flex-col justify-center items-center">
-        <h1 className="gradient-text text-4xl font-[400] md:pb-0 pb-2">
+        <h1 className="gradient-text md:text-4xl text-2xl font-[400] md:pb-0 pb-2">
           Defining Legacies
         </h1>
-        <p className="font-[400] text-sm text-gray-500 ml-2 pt-4 md:pt-2">
+        <p className="font-[400] md:text-sm text-xs text-gray-500 ml-2 pt-4 md:pt-2">
           Discover the brands that choose Momento Nova
         </p>
       </div>

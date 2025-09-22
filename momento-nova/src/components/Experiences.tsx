@@ -66,10 +66,10 @@ const Experiences = ({
     </div>
   ) : (
     <div className="experiences-desc p-3">
-      <h4 className="font-semibold text-3xl text-[#ffffff9d]">
+      <h4 className="font-semibold md:text-3xl text-xl text-[#ffffff9d]">
         {experienceHeading}
       </h4>
-      <p className="font-medium text-sm mt-3 text-gray-500">
+      <p className="font-medium md:text-sm text-xs mt-3 text-gray-500">
         {experienceDescription}
       </p>
     </div>
