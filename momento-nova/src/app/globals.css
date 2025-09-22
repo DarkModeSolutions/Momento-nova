@@ -378,7 +378,7 @@ nextjs-portal * {
 
 hr {
   border: none;
-  height: 2px;
+  height: 1px;
   background: linear-gradient(to right, #ff2df7, #5200ff, #00f0ff);
   border-radius: 1px;
 }
