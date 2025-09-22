@@ -26,8 +26,10 @@ const Footer = () => {
       }`}
     >
       <div className="flex flex-col justify-center items-center">
-        <h1 className="gradient-text text-4xl font-[400]">Get in Touch</h1>
-        <p className="font-[400] text-sm text-gray-500 ml-2 pt-2">
+        <h1 className="gradient-text md:text-4xl text-3xl font-[400]">
+          Get in Touch
+        </h1>
+        <p className="font-[400] md:text-sm text-xs text-gray-500 ml-2 pt-2 text-center">
           We craft the moments you feel now and the legacies you’ll share later
         </p>
       </div>
@@ -140,7 +142,7 @@ const Footer = () => {
             </button>
           </form>
         </div>
-        <div className="w-full mt-3 h-auto rounded-[12px] relative">
+        <div className="w-[90%] mt-3 h-auto rounded-[12px] relative mx-auto">
           <Image
             src={astronautImage}
             alt="Astronaut Sitting"
@@ -156,7 +158,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="mt-3 p-6 md:hidden">
-        <div className="grid grid-cols-4 gap-4">
+        <div className="flex justify-between w-full">
           <div className="text-white font-[500] text-sm">
             <span className="">Product</span>
             <ul

@@ -7,7 +7,7 @@ import ExperienceImageSection from "@/components/ExperienceImageSection";
 const HeroSection = () => {
   return (
     <div className="hero-section-bg-gradient pt-0" id="home">
-      <div className="w-full h-screen relative overflow-hidden">
+      <div className="w-full md:h-screen h-[75vh] relative overflow-hidden">
         <video
           className="w-full h-full object-cover"
           autoPlay
@@ -25,10 +25,10 @@ const HeroSection = () => {
         {/* You can add overlay text here if needed */}
       </div>
       <div className="mt-7 p-5 flex flex-col justify-center items-center">
-        <h1 className="gradient-text text-4xl font-[400] md:pb-0 pb-2">
+        <h1 className="gradient-text md:text-4xl text-2xl font-[400] md:pb-0 pb-2">
           Crafting Moments
         </h1>
-        <p className="font-[400] text-sm text-gray-500 ml-2 pt-2 text-center">
+        <p className="font-[400] md:text-sm text-xs text-gray-500 ml-2 pt-2 text-center">
           Moments designed with purpose- crafted, produced, and flawlessly
           delivered
         </p>
@@ -94,20 +94,10 @@ const HeroSection = () => {
           />
         </div>
       </div>
-      <div className="w-3/4 mx-auto my-10">
+      <div className="w-3/4 mx-auto my-10 hidden md:block">
         <hr />
       </div>
       <div className="w-full md:h-[630px] h-[200px] mt-10">
-        {/* <Image
-          src={corporateImg}
-          alt="Corporate Image"
-          className="w-full h-full object-cover hidden md:block"
-        />
-        <Image
-          src={corporateImg}
-          alt="Corporate Image"
-          className="w-full object-cover block md:hidden"
-        /> */}
         <ExperienceImageSection />
       </div>
     </div>
