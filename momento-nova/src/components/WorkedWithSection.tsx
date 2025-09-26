@@ -1,10 +1,10 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import marriottImg from "@/../public/assets/images/marriott.png";
-import novotelImg from "@/../public/assets/images/novotel.png";
+// import novotelImg from "@/../public/assets/images/novotel.png";
 import oneandonlyImg from "@/../public/assets/images/oneandonly.png";
 import pullmanImg from "@/../public/assets/images/pullman.png";
-import rafflesimg from "@/../public/assets/images/raffleshotel.png";
+// import rafflesimg from "@/../public/assets/images/raffleshotel.png";
 import addressImg from "@/../public/assets/images/address.png";
 import accorimg from "@/../public/assets/images/accor.png";
 // import newMovenpickImg from "@/../public/assets/images/newMovenpickImg.png";
@@ -15,6 +15,13 @@ import jumeirahImg from "@/../public/assets/images/jumeirah.png";
 import keminskiImg from "@/../public/assets/images/keminski.png";
 import intercontinentalImg from "@/../public/assets/images/intercontinental.png";
 import hiltonImg from "@/../public/assets/images/hilton.png";
+import UnicarePharmaceuticalsImg from "@/../public/assets/images/UnicarePharmaceuticalsLogo.png";
+import SanofiGulfImg from "@/../public/assets/images/SanofiGulfLogo.png";
+import PfizerMiddleEastImg from "@/../public/assets/images/PfizerMiddleEastLogo.png";
+import NovartisGulfImg from "@/../public/assets/images/Novartis-Gulf-Logo.png";
+import GlaxoSmithKlineMiddleEastImg from "@/../public/assets/images/GlaxoSmithKlineMiddleEastLogo.png";
+import ExpoCityImg from "@/../public/assets/images/ExpoCityLogo.png";
+import CocaColaImg from "@/../public/assets/images/CocaColaArenaLogo.png";
 import WorkedWith from "@/components/WorkedWith";
 
 const WorkedWithSection = () => {
@@ -100,15 +107,15 @@ const WorkedWithSection = () => {
       mobileWidth: "w-[30%]",
       mobileTopPlacement: "top-2",
     },
-    {
-      src: novotelImg,
-      alt: "Novotel",
-      height: "h-[%]",
-      width: "w-24",
-      mobileHeight: "h-16",
-      mobileWidth: "w-[30%]",
-      mobileTopPlacement: "top-2",
-    },
+    // {
+    //   src: novotelImg,
+    //   alt: "Novotel",
+    //   height: "h-[%]",
+    //   width: "w-24",
+    //   mobileHeight: "h-16",
+    //   mobileWidth: "w-[30%]",
+    //   mobileTopPlacement: "top-2",
+    // },
     {
       src: oneandonlyImg,
       alt: "One&Only",
@@ -127,9 +134,27 @@ const WorkedWithSection = () => {
       mobileWidth: "w-[30%]",
       mobileTopPlacement: "top-2",
     },
+    // {
+    //   src: rafflesimg,
+    //   alt: "Raffles",
+    //   height: "h-[%]",
+    //   width: "w-24",
+    //   mobileHeight: "h-16",
+    //   mobileWidth: "w-[30%]",
+    //   mobileTopPlacement: "top-2",
+    // },
     {
-      src: rafflesimg,
-      alt: "Raffles",
+      src: addressImg,
+      alt: "Address",
+      height: "h-[40%]",
+      width: "w-24",
+      mobileHeight: "h-16",
+      mobileWidth: "w-[30%]",
+      mobileTopPlacement: "top-2",
+    },
+    {
+      src: CocaColaImg,
+      alt: "Coca Cola",
       height: "h-[%]",
       width: "w-24",
       mobileHeight: "h-16",
@@ -137,8 +162,53 @@ const WorkedWithSection = () => {
       mobileTopPlacement: "top-2",
     },
     {
-      src: addressImg,
-      alt: "Address",
+      src: ExpoCityImg,
+      alt: "Expo City",
+      height: "h-[%]",
+      width: "w-24",
+      mobileHeight: "h-16",
+      mobileWidth: "w-[30%]",
+      mobileTopPlacement: "top-2",
+    },
+    {
+      src: GlaxoSmithKlineMiddleEastImg,
+      alt: "Glaxo Smith Kline Middle East",
+      height: "h-[%]",
+      width: "w-24",
+      mobileHeight: "h-16",
+      mobileWidth: "w-[30%]",
+      mobileTopPlacement: "top-2",
+    },
+    {
+      src: NovartisGulfImg,
+      alt: "Novartis Gulf",
+      height: "h-[%]",
+      width: "w-24",
+      mobileHeight: "h-16",
+      mobileWidth: "w-[30%]",
+      mobileTopPlacement: "top-2",
+    },
+    {
+      src: PfizerMiddleEastImg,
+      alt: "Pfizer Middle East",
+      height: "h-[%]",
+      width: "w-24",
+      mobileHeight: "h-16",
+      mobileWidth: "w-[30%]",
+      mobileTopPlacement: "top-2",
+    },
+    {
+      src: SanofiGulfImg,
+      alt: "Sanofi Gulf",
+      height: "h-[%]",
+      width: "w-24",
+      mobileHeight: "h-16",
+      mobileWidth: "w-[30%]",
+      mobileTopPlacement: "top-2",
+    },
+    {
+      src: UnicarePharmaceuticalsImg,
+      alt: "Unicare Pharmaceuticals",
       height: "h-[%]",
       width: "w-24",
       mobileHeight: "h-16",
@@ -146,6 +216,8 @@ const WorkedWithSection = () => {
       mobileTopPlacement: "top-2",
     },
   ];
+
+  console.log(workedWithLogos.length);
 
   return (
     <div className="p-5 hero-section-bg-gradient" id="portfolio">
@@ -189,6 +261,19 @@ const WorkedWithSection = () => {
         {/* Third row: 6 logos (indices 7, 8, 9, 10, 11, 12) */}
         <div className="mt-5 flex flex-wrap gap-8 justify-center items-center">
           {workedWithLogos.slice(7, 13).map((logo, index) => {
+            return (
+              <WorkedWith
+                key={`third-${index}`}
+                img={logo.src}
+                alt={logo.alt}
+                height={logo.height}
+                width={logo.width}
+              />
+            );
+          })}
+        </div>
+        <div className="mt-5 flex flex-wrap gap-8 justify-center items-center">
+          {workedWithLogos.slice(13).map((logo, index) => {
             return (
               <WorkedWith
                 key={`third-${index}`}
