@@ -71,6 +71,13 @@ const Footer = () => {
       alert("Failed to send message. Please try again.");
     } finally {
       setIsLoading(false);
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
     }
   };
 
