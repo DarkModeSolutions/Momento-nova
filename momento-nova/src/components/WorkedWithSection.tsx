@@ -229,8 +229,7 @@ const WorkedWithSection = () => {
           Discover the brands that choose Momento Nova
         </p>
       </div>
-      <div className="md:block hidden">
-        {/* First row: 3 logos (indices 0, 1, 2) */}
+      {/* <div className="md:block hidden">
         <div className="mt-5 flex flex-wrap gap-8 justify-center items-center">
           {workedWithLogos.slice(0, 3).map((logo, index) => {
             return (
@@ -244,7 +243,6 @@ const WorkedWithSection = () => {
             );
           })}
         </div>
-        {/* Second row: 4 logos (indices 3, 4, 5, 6) */}
         <div className="mt-5 flex flex-wrap gap-8 justify-center items-center">
           {workedWithLogos.slice(3, 7).map((logo, index) => {
             return (
@@ -258,7 +256,6 @@ const WorkedWithSection = () => {
             );
           })}
         </div>
-        {/* Third row: 6 logos (indices 7, 8, 9, 10, 11, 12) */}
         <div className="mt-5 flex flex-wrap gap-8 justify-center items-center">
           {workedWithLogos.slice(7, 13).map((logo, index) => {
             return (
@@ -285,8 +282,8 @@ const WorkedWithSection = () => {
             );
           })}
         </div>
-      </div>
-      <div className="md:hidden block">
+      </div> */}
+      <div className="block">
         <Marquee gradient={false} speed={50}>
           {workedWithLogos.map((logo, index) => (
             <WorkedWith

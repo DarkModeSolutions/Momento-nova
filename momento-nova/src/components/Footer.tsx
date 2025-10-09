@@ -7,15 +7,72 @@ import { CiLinkedin } from "react-icons/ci";
 import React, { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import emailjs from "@emailjs/browser";
 
 const Footer = () => {
   const [currentPath, setCurrentPath] = useState("");
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
   const pathname = usePathname();
 
   useEffect(() => {
     setCurrentPath(pathname);
   }, [pathname]);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      // Replace these with your actual EmailJS credentials
+      const templateParams = {
+        from_name: `${formData.firstName} ${formData.lastName}`,
+        from_email: formData.email,
+        phone: formData.phone,
+        message: formData.message,
+        to_email: "darkmodesolution@gmail.com",
+      };
+
+      await emailjs.send(
+        "service_akoyt12", // Replace with your service ID
+        "template_q33an33", // Replace with your template ID
+        templateParams,
+        "-VedFDcrDWDmIGLnF" // Replace with your public key
+      );
+
+      alert("Message sent successfully! 🚀");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error sending email:", error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   return (
     <div
@@ -39,7 +96,10 @@ const Footer = () => {
           <p>
             Reach out and let the magic of collaboration illuminate our skies.
           </p>
-          <form className="flex flex-col gap-3 w-full pt-6">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-3 w-full pt-6"
+          >
             <div className="flex justify-between items-center gap-3">
               <input
                 type="text"
@@ -47,6 +107,7 @@ const Footer = () => {
                 name="firstName"
                 id="firstName"
                 className=" rounded-[8px] glass-input p-2 w-full"
+                onChange={handleInputChange}
               />
               <input
                 type="text"
@@ -54,6 +115,7 @@ const Footer = () => {
                 name="lastName"
                 id="lastName"
                 className=" rounded-[8px] glass-input p-2 w-full"
+                onChange={handleInputChange}
               />
             </div>
             <input
@@ -62,6 +124,7 @@ const Footer = () => {
               id="email"
               placeholder="Email"
               className=" rounded-[8px] glass-input p-2"
+              onChange={handleInputChange}
             />
             <input
               type="tel"
@@ -69,14 +132,20 @@ const Footer = () => {
               id="phone"
               placeholder="Phone Number"
               className="rounded-[8px] glass-input p-2"
+              onChange={handleInputChange}
             />
             <textarea
               name="message"
               id="message"
               placeholder="Message"
               className=" rounded-[8px] glass-input p-2"
+              onChange={handleInputChange}
             ></textarea>
-            <button className="p-4 button-gradient">
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="p-4 button-gradient"
+            >
               Send it to the Moon 🚀
             </button>
           </form>
@@ -102,13 +171,17 @@ const Footer = () => {
           <p className="mt-3">
             Reach out and let the magic of collaboration illuminate our skies.
           </p>
-          <form className="flex flex-col gap-3 w-full pt-6">
+          <form
+            onSubmit={handleSubmit}
+            className="flex flex-col gap-3 w-full pt-6"
+          >
             <input
               type="text"
               placeholder="First Name"
               name="firstName"
               id="firstName"
               className=" rounded-[8px] glass-input p-2"
+              onChange={handleInputChange}
             />
             <input
               type="text"
@@ -116,6 +189,7 @@ const Footer = () => {
               name="lastName"
               id="lastName"
               className=" rounded-[8px] glass-input p-2"
+              onChange={handleInputChange}
             />
             <input
               type="email"
@@ -123,6 +197,7 @@ const Footer = () => {
               id="email"
               placeholder="Email"
               className=" rounded-[8px] glass-input p-2"
+              onChange={handleInputChange}
             />
             <input
               type="tel"
@@ -130,14 +205,20 @@ const Footer = () => {
               id="phone"
               placeholder="Phone Number"
               className="rounded-[8px] glass-input p-2"
+              onChange={handleInputChange}
             />
             <textarea
               name="message"
               id="message"
               placeholder="Message"
               className=" rounded-[8px] glass-input p-2"
+              onChange={handleInputChange}
             ></textarea>
-            <button className="p-4 button-gradient">
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="p-4 button-gradient"
+            >
               Send it to the Moon 🚀
             </button>
           </form>
