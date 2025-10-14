@@ -1,13 +1,12 @@
 import Experiences from "@/components/Experiences";
 // import Image from "next/image";
 // import corporateImg from "@/../public/assets/images/corporate.png";
-import React from "react";
 import ExperienceImageSection from "@/components/ExperienceImageSection";
 
 const HeroSection = () => {
   return (
     <div className="hero-section-bg-gradient pt-0" id="home">
-      <div className="w-full md:h-screen h-[75vh] relative overflow-hidden">
+      <div className="w-full h-screen relative overflow-hidden">
         <video
           className="w-full h-full object-cover"
           autoPlay
