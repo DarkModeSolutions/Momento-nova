@@ -1,13 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import astronautImage from "@/../public/assets/images/astronaut-sitting.png";
-import { FaInstagram } from "react-icons/fa";
-import { CiLinkedin } from "react-icons/ci";
-import React, { useEffect, useState } from "react";
-import { usePathname } from "next/navigation";
-import Link from "next/link";
 import emailjs from "@emailjs/browser";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import { CiLinkedin } from "react-icons/ci";
+import { FaInstagram } from "react-icons/fa";
 
 const Footer = () => {
   const [currentPath, setCurrentPath] = useState("");
@@ -114,6 +114,7 @@ const Footer = () => {
                 name="firstName"
                 id="firstName"
                 className=" rounded-[8px] glass-input p-2 w-full"
+                value={formData.firstName}
                 onChange={handleInputChange}
               />
               <input
@@ -122,6 +123,7 @@ const Footer = () => {
                 name="lastName"
                 id="lastName"
                 className=" rounded-[8px] glass-input p-2 w-full"
+                value={formData.lastName}
                 onChange={handleInputChange}
               />
             </div>
@@ -131,6 +133,7 @@ const Footer = () => {
               id="email"
               placeholder="Email"
               className=" rounded-[8px] glass-input p-2"
+              value={formData.email}
               onChange={handleInputChange}
             />
             <input
@@ -139,6 +142,7 @@ const Footer = () => {
               id="phone"
               placeholder="Phone Number"
               className="rounded-[8px] glass-input p-2"
+              value={formData.phone}
               onChange={handleInputChange}
             />
             <textarea
@@ -146,6 +150,7 @@ const Footer = () => {
               id="message"
               placeholder="Message"
               className=" rounded-[8px] glass-input p-2"
+              value={formData.message}
               onChange={handleInputChange}
             ></textarea>
             <button
@@ -187,7 +192,8 @@ const Footer = () => {
               placeholder="First Name"
               name="firstName"
               id="firstName"
-              className=" rounded-[8px] glass-input p-2"
+              className=" rounded-[8px] glass-input p-2 w-full"
+              value={formData.firstName}
               onChange={handleInputChange}
             />
             <input
@@ -195,7 +201,8 @@ const Footer = () => {
               placeholder="Last Name"
               name="lastName"
               id="lastName"
-              className=" rounded-[8px] glass-input p-2"
+              className=" rounded-[8px] glass-input p-2 w-full"
+              value={formData.lastName}
               onChange={handleInputChange}
             />
             <input
@@ -204,6 +211,7 @@ const Footer = () => {
               id="email"
               placeholder="Email"
               className=" rounded-[8px] glass-input p-2"
+              value={formData.email}
               onChange={handleInputChange}
             />
             <input
@@ -212,6 +220,7 @@ const Footer = () => {
               id="phone"
               placeholder="Phone Number"
               className="rounded-[8px] glass-input p-2"
+              value={formData.phone}
               onChange={handleInputChange}
             />
             <textarea
@@ -219,6 +228,7 @@ const Footer = () => {
               id="message"
               placeholder="Message"
               className=" rounded-[8px] glass-input p-2"
+              value={formData.message}
               onChange={handleInputChange}
             ></textarea>
             <button
